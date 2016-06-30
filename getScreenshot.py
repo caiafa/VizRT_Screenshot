@@ -46,7 +46,7 @@ class Screenshot:
 
         payload = {
             "sc": "SCENE*{scene_name}".format(**settings),
-            "p": "<payload xmlns='http://www.vizrt.com/types'><field name='01'><value>{seed}</value></field></payload>".format(**settings), #
+            "p": "<payload xmlns='http://www.vizrt.com/types'><field name='01'><value>{seed}</value></field></payload>".format(**settings),
             "s": "<snapshotrequest xmlns='http://www.vizrt.com/snapshotrequest'><position>{position}</position></snapshotrequest>".format(**settings)
         }
         return payload
@@ -93,5 +93,5 @@ class Screenshot:
 
 
 if __name__ == "__main__":
-    image1 = Screenshot(scene_name='41730', frame_index='$2', mode='named')
-    print(image1.raw_image)
+    image1 = Screenshot(scene_name='41769', frame_index='$2', mode='named')
+    print(image1.composite_image.save("d:\s.jpg"))
